@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Greeter from './components/Greeter/Greeter';
+import List from './components/List/List';
+import { useState } from 'react';
 
 function App() {
+
+  const [records, serRecords] = useState([]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +23,10 @@ function App() {
         >
           Learn React
         </a>
+        <span className='home'>Hello</span>
+        <span style={{opacity: 0}}>Bye</span>
+        <Greeter />
+        <List records={records}/>
       </header>
     </div>
   );
