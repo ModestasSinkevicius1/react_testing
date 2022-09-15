@@ -34,3 +34,9 @@ test("check if text is formed corectly with tags", () => {
   expect(text).toBeInTheDocument();
 });
 
+test('Match snapshot', () => {
+  const { container } = render(<App />)
+
+  expect(container).toMatchSnapshot();
+});
+

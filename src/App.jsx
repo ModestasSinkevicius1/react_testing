@@ -3,10 +3,11 @@ import './App.css';
 import Greeter from './components/Greeter/Greeter';
 import List from './components/List/List';
 import { useState } from 'react';
+import randColor from './Utilities/random_color.js'
 
 function App() {
 
-  const [records, serRecords] = useState([]);
+  const [records, serRecords] = useState([...Array(50)].map(a => ({ name: randColor() }) ));
 
   return (
     <div className="App">
