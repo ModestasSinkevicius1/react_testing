@@ -29,7 +29,7 @@ describe("<Greeter/>", () => {
         const inbox = screen.getByPlaceholderText("Type name");
         const btn = screen.getByText('Show name');
 
-        userEvent.type(inbox, '');
+        userEvent.type(inbox, " ");
         userEvent.click(btn);
 
         // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access

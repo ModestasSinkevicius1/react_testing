@@ -4,6 +4,7 @@ import Greeter from './components/Greeter/Greeter';
 import List from './components/List/List';
 import { useState } from 'react';
 import randColor from './Utilities/random_color.js'
+import List2 from './components/ListFromGet/List2';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         </a>
         <span className='home'>Hello</span>
         <span style={{opacity: 0}}>Bye</span>
+        <List2 />
         <Greeter />
         <List records={records}/>
       </header>
