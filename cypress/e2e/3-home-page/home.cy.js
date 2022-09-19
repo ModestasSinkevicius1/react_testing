@@ -9,12 +9,23 @@ describe('empty spec', () => {
     cy.get('.home').contains('Hello');
   })
 
-  it('Empty input outputs no text', () =>{
-    const newItem = '';
+  it('Text input outputs display', () =>{
+    const newItem = 'Labas';
 
-    cy.get('.btn').type(`${newItem}{enter}`);
+    cy.get('.input-text').type(`${newItem}`);
+    cy.get('.btn').click();
 
-    // const actual = cy.get('span').contains('rytas');
+    cy.contains('rytas');
+
+    // eslint-disable-next-line no-unused-expressions
+    // expect(actual).to.be.null;
+  })
+
+  it('Empty text input outputs no display', () =>{
+
+    cy.get('.btn').click();
+
+    cy.contains('rytas').should('not.exist');
 
     // eslint-disable-next-line no-unused-expressions
     // expect(actual).to.be.null;
